@@ -1,5 +1,10 @@
 # I used ChatGPT to help me write me this complete code
-def is_symmetric(matrix)
+def is_symmetric(matrix):
+    """
+    This function check if the matrix is symmetric or not.
+    :param matrix: A square matrix represented as a list of lists.
+    :return: True if the matrix is symmetric, False otherwise.
+    """
     n = len(matrix)
     for i in range(n):
         for j in range(i + 1, n):
@@ -22,6 +27,11 @@ def is_positive_definite(matrix):
 
 
 def minor(matrix, n):
+    """
+    Compute the determinant of a matrix A using recursion and the cofactor expansion.
+    :param A: Square matrix
+    :return: Determinant of the matrix A
+    """
     if n == 1:
         return matrix[0][0]
     det = 0
@@ -31,6 +41,12 @@ def minor(matrix, n):
 
 
 def cholesky_decomposition(matrix):
+    """
+        Performs the Cholesky decomposition on a given square, symmetric, and positive definite matrix.
+        Parameters:matrix (list of lists of floats): A square, symmetric, and positive definite matrix to be decomposed.
+        Returns:lower (list of lists of floats): The lower triangular matrix resulting from the Cholesky decomposition.
+        Note: The input matrix must be square (n x n), symmetric, and positive definite. This function does not perform checks for these properties and may produce incorrect results or errors if the input does not meet these criteria.The function uses only the lower triangular part of the input matrix, assuming it is symmetric.
+    """
     n = len(matrix)
     lower = [[0.0] * n for _ in range(n)]
 
