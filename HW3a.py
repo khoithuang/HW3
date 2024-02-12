@@ -1,3 +1,4 @@
+# I used ChatGPT to help me write me this complete code
 def is_symmetric(matrix)
     n = len(matrix)
     for i in range(n):
@@ -44,7 +45,7 @@ def cholesky_decomposition(matrix):
     return lower
 
 
-def doolittle_decomposition(matrix):
+def doolittle_decomposition(matrix): # I did not do the Gauss_Seidel so I get help from ChatGPT to get this code
     n = len(matrix)
     L = [[0 if i != j else 1 for j in range(n)] for i in range(n)]
     U = [[0 for j in range(n)] for i in range(n)]
