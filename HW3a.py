@@ -62,6 +62,11 @@ def cholesky_decomposition(matrix):
 
 
 def doolittle_decomposition(matrix): # I did not do the Gauss_Seidel so I get help from ChatGPT to get this code
+    """
+    Performs the Doolittle decomposition of a square matrix into a lower triangular matrix L and an upper triangular matrix U.
+    Parameters: matrix (list of lists of floats): The square matrix to be decomposed.
+    Returns: L (list of lists of floats): The lower triangular matrix.U (list of lists of floats): The upper triangular matrix.
+    """
     n = len(matrix)
     L = [[0 if i != j else 1 for j in range(n)] for i in range(n)]
     U = [[0 for j in range(n)] for i in range(n)]
